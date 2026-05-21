@@ -1,0 +1,38 @@
+Guion de Presentación: Equipo Ninja "Shirai Ryu"
+1. ¿Cuál es la clase principal?
+En nuestro proyecto tenemos dos clases que podríamos considerar "principales" dependiendo de cómo se mire:
+
+La clase base o superclase es Personaje. Esta es la plantilla general que dicta cómo funciona cualquier luchador en el juego.
+
+La clase ejecutora es Arenajava, porque es la que contiene el método main y es donde realmente ocurre la batalla.
+
+Aparte, creamos nuestra propia clase Ninja que hereda de la clase Personaje.
+
+2. ¿Qué objetos crearon?
+Nosotros creamos dos objetos en la clase Arenajava para poder simular la batalla:
+
+El primer objeto es jugador1, que es una instancia de nuestra clase Ninja, y le dimos el nombre de "Shirai Ryu".
+
+El segundo objeto es jugador2, que es una instancia de la clase Guerrero, llamado "Guerrero Azul", que usamos como oponente.
+
+3. ¿Qué atributos tiene el personaje?
+Nuestro Ninja "Shirai Ryu" hereda los atributos encapsulados (privados) de la clase Personaje. Gracias al constructor de nuestra clase Ninja, sus atributos quedaron definidos así:
+
+Nombre: "Shirai Ryu"
+
+Vida: 100
+
+Ataque: 19
+
+Defensa: 8
+
+4. ¿Qué métodos puede ejecutar?
+Nuestro personaje puede ejecutar dos tipos de métodos:
+
+Los métodos heredados: Que comparte con todos los personajes, como atacar(), recibirDaño(), mostrarEstado(), estaVivo() y getNombre().
+
+Su método especial: Llamado DisparoDoble(), exclusivo de la clase Ninja, que le permite causar directamente 27 puntos de daño al enemigo.
+
+5. ¿Qué ventaja tiene usar programación orientada a objetos en este juego?
+La ventaja principal es no repetir código y mantener todo ordenado.
+Gracias a la herencia, no tuvimos que programar desde cero cómo funciona el daño o cómo se muestra la vida para el Ninja y el Guerrero; ambos heredan toda esa lógica de la clase Personaje. Además, usamos encapsulamiento (poniendo los atributos en private), lo que nos da seguridad para que la vida nunca baje de cero por accidente. Si mañana queremos agregar un Mago o un Robot, solo creamos una clase nueva que herede de Personaje y listo, el juego es muy fácil de expandir.
