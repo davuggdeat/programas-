@@ -14,6 +14,10 @@ public class Arenajava {
 		jugador2.mostrarEstado();
 		
 		while (jugador1.estaVivo() && jugador2.estaVivo()) {
+			double azar = Math.random();
+			if (azar < 0.2) {
+				Jugador1.DisparoDoble(jugador);
+			}else {
 			   jugador1.atacar(jugador2);
 			
 			if(jugador2.estaVivo()) {
