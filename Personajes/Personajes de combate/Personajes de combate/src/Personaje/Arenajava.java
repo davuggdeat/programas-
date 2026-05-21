@@ -4,34 +4,36 @@ public class Arenajava {
 
 	public static void main (String[]args) {
 		
-		Personaje jugador1 = new Personaje("Guerrero Azul", 100, 25, 8);
-		Personaje jugador2 = new Personaje("mago rojo", 100, 22, 5);
+		Ninja ninja = new Ninja("Shirai Ryu");
+        Guerrero guerrero = new Guerrero("Thor");
 		
 		System.out.println("Comienza la batalla en la Arena Java");
 		System.out.println();
 		
-		jugador1.mostrarEstado();
-		jugador2.mostrarEstado();
-		
-		while (jugador1.estaVivo() && jugador2.estaVivo()) {
+		ninja.mostrarEstado();
+        guerrero.mostrarEstado();
+        
+		while (ninja.estaVivo() && guerrero.estaVivo()) {
 			double azar = Math.random();
-			if (azar < 0.2) {
-				Jugador1.DisparoDoble(jugador);
+			if (azar < 0.3) {
+				ninja.DisparoDoble(guerrero);
 			}else {
-			   jugador1.atacar(jugador2);
+				
+			}
+			   ninja.atacar(guerrero);
 			
-			if(jugador2.estaVivo()) {
-				jugador2.atacar(jugador1);
+			if(guerrero.estaVivo()) {
+				guerrero.atacar(ninja);
 			}
 			
-			jugador1.mostrarEstado();
-			jugador2.mostrarEstado();
+			ninja.mostrarEstado();
+			guerrero.mostrarEstado();
 		}
 		
-		if (jugador1.estaVivo()) {
-			 System.out.println("Gano" + jugador1.getNombre());
+		if (ninja.estaVivo()) {
+			 System.out.println("Gano " + ninja.getNombre());
 		} else {
-			System.out.println("Gano" + jugador2.getNombre());
+			System.out.println("Gano " + guerrero.getNombre());
 		}
 	}
 }
