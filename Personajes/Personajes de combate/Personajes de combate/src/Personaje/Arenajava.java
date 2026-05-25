@@ -2,7 +2,7 @@ package Personaje;
 
 public class Arenajava {
 
-	public static void main (String[]args) {
+	public static void main(String[] args) {
 		
 		Ninja ninja = new Ninja("Shirai Ryu");
         Guerrero guerrero = new Guerrero("Thor");
@@ -14,26 +14,46 @@ public class Arenajava {
         guerrero.mostrarEstado();
         
 		while (ninja.estaVivo() && guerrero.estaVivo()) {
+
 			double azar = Math.random();
-			if (azar < 0.3) {
+
+			if (azar < 0.6) {
+
+				ninja.esconderse(guerrero);
+
+			} else if (azar < 0.4) {
+
 				ninja.DisparoDoble(guerrero);
-			}else {
-				
+
+			} else {
+
+				ninja.atacar(guerrero);
 			}
-			   ninja.atacar(guerrero);
-			
-			if(guerrero.estaVivo()) {
+
+			if (guerrero.estaVivo()) {
+				
+				//Por si el ninja esta escondido
+				if (ninja.estaEscondido()) {
+
+                    System.out.println(ninja.getNombre()
+                            + " esquivo el ataque escondiendose.");
+                    
+                    ninja.salirEscondite();
+
+                } else {
+               
 				guerrero.atacar(ninja);
 			}
-			
+		
+		}
 			ninja.mostrarEstado();
 			guerrero.mostrarEstado();
 		}
 		
 		if (ninja.estaVivo()) {
-			 System.out.println("Gano " + ninja.getNombre());
+			System.out.println("Ganó " + ninja.getNombre());
 		} else {
-			System.out.println("Gano " + guerrero.getNombre());
+			System.out.println("Ganó " + guerrero.getNombre());
 		}
 	}
 }
