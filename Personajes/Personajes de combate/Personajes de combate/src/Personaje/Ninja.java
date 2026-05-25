@@ -5,7 +5,7 @@ public class Ninja extends Personaje {
 	private boolean escondido = false;
 
     public Ninja(String nombre) {
-        super(nombre, 100, 23, 10);
+        super(nombre, 100, 21, 10);
     }
     
     
@@ -13,9 +13,9 @@ public class Ninja extends Personaje {
 
         System.out.println(getNombre() + " usa Disparo Doble.");
 
-        enemigo.recibirDaño(31);
+        enemigo.recibirDaño(25);
 
-        System.out.println("¡Causó 31 de daño!");
+        System.out.println("¡Causó 25 de daño!");
     }
     
     
