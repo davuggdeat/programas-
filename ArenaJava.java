@@ -14,6 +14,7 @@ public class Arenajava {
         System.out.println("3. Androide");
         System.out.println("4. Pokemon");
         System.out.println("5. Ares");
+        System.out.println("6. Nacht_Arena");
 
         int opcion = entrada.nextInt();
 
@@ -41,6 +42,10 @@ public class Arenajava {
         	jugador = new Ares("Ares");
         	break;
 
+        case 6:
+        	jugador = new Nacht_Arena("Nacht");
+        	break;
+        	
         default:
             System.out.println("Opción inválida.");
             entrada.close();
@@ -52,7 +57,8 @@ public class Arenajava {
                 new Guerrero("Thor"),
                 new Androide("Caster 17"),
                 new Pokemon("Nidorey"),
-                new Ares("Ares")
+                new Ares("Ares"),
+                new Nacht_Arena("Nacht")
         };
 
         System.out.println("Elegiste a " + jugador.getNombre());
@@ -99,7 +105,7 @@ public class Arenajava {
                 return;
             }
 
-            System.out.println("¡Ganaste la batalla!");
+            System.out.println("¡Ganaste las batallas!");
 
             jugador.restaurarVida();
 
@@ -107,7 +113,7 @@ public class Arenajava {
         }
 
         System.out.println("¡¡FELICIDADES!!");
-        System.out.println(jugador.getNombre()  + " derrotó a todos los personajes.");
+        System.out.println(jugador.getNombre()  + " derroto a todos los personajes.");
 
         entrada.close();
     }
