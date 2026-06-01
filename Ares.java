@@ -1,4 +1,5 @@
 package Personaje;
+
 public class Ares extends Personaje {
 
     // CONSTRUCTOR
@@ -8,20 +9,15 @@ public class Ares extends Personaje {
 
     // MÉTODO ESPECIAL
     public void golpeDoble(Personaje enemigo) {
-        int danoEspecial = (ataque * 2) - enemigo.defensa;
-
-        if (danoEspecial < 0) {
-            danoEspecial = 0;
-        }
-
-        enemigo.vida -= danoEspecial;
-
-        if (enemigo.vida < 0) {
-            enemigo.vida = 0;
-        }
-
-        System.out.println(nombre + " usa Golpe Doble sobre " +
-                enemigo.nombre + " y causa " + danoEspecial + " de daño.");
+        int dañoEspecial = (60) - enemigo.defensa;
+        
+        enemigo.recibirDaño(dañoEspecial);
+        
+        System.out.println(getNombre() + " usa Golpe Doble sobre " + enemigo.getNombre() + " y causa " + dañoEspecial + " de daño.");
     }
 
+    @Override
+    public void habilidadEspecial(Personaje enemigo) {
+        golpeDoble(enemigo);
+    }
 }
