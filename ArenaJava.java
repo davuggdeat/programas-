@@ -2,7 +2,7 @@ package Personaje;
 
 import java.util.Scanner;
 
-public class ArenaJava {
+public class Arenajava {
 
     public static void main(String[] args) {
 
@@ -13,6 +13,7 @@ public class ArenaJava {
         System.out.println("2. Guerrero");
         System.out.println("3. Androide");
         System.out.println("4. Pokemon");
+        System.out.println("5. Ares");
 
         int opcion = entrada.nextInt();
 
@@ -25,7 +26,7 @@ public class ArenaJava {
             break;
 
         case 2:
-            jugador = new Guerrero("Thor");
+            jugador = new Guerrero("Noc");
             break;
 
         case 3:
@@ -35,6 +36,10 @@ public class ArenaJava {
         case 4:
             jugador = new Pokemon("Charizard");
             break;
+         
+        case 5:
+        	jugador = new Ares("Ares");
+        	break;
 
         default:
             System.out.println("Opción inválida.");
@@ -46,7 +51,8 @@ public class ArenaJava {
                 new Ninja("Shirai Ryu"),
                 new Guerrero("Thor"),
                 new Androide("Caster 17"),
-                new Pokemon("Nidorey")
+                new Pokemon("Nidorey"),
+                new Ares("Ares")
         };
 
         System.out.println("Elegiste a " + jugador.getNombre());
