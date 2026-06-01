@@ -2,13 +2,16 @@ package Personaje;
 
 public class Nacht_Arena extends Personaje {
 
-    public Nacht_Arena() {
+    public Nacht_Arena(String nombre) {
         super("Nacht", 100, 28, 7);
     }
 
-    @Override
-    public void habilidadEspecial(Personaje enemigo) {
-
+    
+    public void ModoDemonio(Personaje enemigo) {
+    	
+    	int daño = 45;
+    	 enemigo.recibirDaño(daño);
+    	 
         System.out.println();
         System.out.println(getNombre()
                 + " invoca el poder de las sombras.");
@@ -17,8 +20,11 @@ public class Nacht_Arena extends Personaje {
 
         System.out.println("Un aura oscura envuelve el campo de batalla.");
 
-        System.out.println("Nacht golpea al enemigo con energía demoníaca.");
-
-        enemigo.recibirDaño(45);
+        System.out.println("Nacht golpea al enemigo con energía demoníaca causando " + daño + " de daño. ");
+    }
+    
+    @Override
+    public void habilidadEspecial(Personaje enemigo) {
+        ModoDemonio(enemigo);
     }
 }
