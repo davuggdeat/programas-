@@ -37,10 +37,7 @@ public class Personaje {
         }
     }
     
-    public void habilidadEspecial(Personaje enemigo) {
-	    atacar(enemigo);
-	}
-
+   
     public void restaurarVida() {
         setVida(100);
     }
@@ -56,6 +53,10 @@ public class Personaje {
         return getVida() > 0;
     }
     
+    public void habilidadEspecial(Personaje enemigo) {
+	    atacar(enemigo);
+	}
+
  
 
     public String getNombre() {
