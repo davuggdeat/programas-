@@ -1,7 +1,7 @@
 package Personaje;
 
 public class Ares extends Personaje {
-
+	
     // CONSTRUCTOR
     public Ares(String nombre) {
         super(nombre, 100, 30, 10);
@@ -9,7 +9,7 @@ public class Ares extends Personaje {
 
     // MÉTODO ESPECIAL
     public void golpeDoble(Personaje enemigo) {
-        int dañoEspecial = (60) - enemigo.defensa;
+        int dañoEspecial = (60) - enemigo.getDefensa();
         
         enemigo.recibirDaño(dañoEspecial);
         

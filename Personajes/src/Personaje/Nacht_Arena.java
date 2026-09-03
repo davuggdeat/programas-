@@ -7,7 +7,7 @@ public class Nacht_Arena extends Personaje {
     }
 
     
-    public void ModoDemonio(Personaje enemigo) {
+    public void modoDemonio(Personaje enemigo) {
     	
     	int daño = 45;
     	 enemigo.recibirDaño(daño);
@@ -25,6 +25,6 @@ public class Nacht_Arena extends Personaje {
     
     @Override
     public void habilidadEspecial(Personaje enemigo) {
-        ModoDemonio(enemigo);
+        modoDemonio(enemigo);
     }
 }

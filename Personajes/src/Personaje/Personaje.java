@@ -2,14 +2,21 @@ package Personaje;
 
 public class Personaje {
 
+	
     private String nombre;
     private int vida;
     private int ataque;
-    int defensa;
+    private int defensa;
+    
+    // REFACTORIZACIÓN:
+    // Se guarda la vida máxima para que restaurarVida() no dependa
+    // de que todos los personajes tengan exactamente 100 de vida.
+    private int vidaMaxima;
 
     public Personaje(String nombre, int vida, int ataque, int defensa) {
         this.nombre = nombre;
-        this.setVida(vida);
+        this.vida = vida;
+        this.vidaMaxima = vida;
         this.ataque = ataque;
         this.defensa = defensa;		
     }
@@ -42,7 +49,7 @@ public class Personaje {
 	}
 
     public void restaurarVida() {
-        setVida(100);
+        setVida(vidaMaxima);
     }
     
     public void mostrarEstado() {

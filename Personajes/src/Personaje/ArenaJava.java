@@ -108,8 +108,11 @@ public class ArenaJava {
             System.out.println("¡Ganaste las batallas!");
 
             jugador.restaurarVida();
-
-            System.out.println("La vida de "  + jugador.getNombre()  + " fue restaurada a 100.");
+            
+         
+            // Ya no decimos que siempre se restaura a 100, porque ahora cada personaje tiene una vida máxima.
+        System.out.println("La vida de " + jugador.getNombre() + " fue restaurada.");
+        
         }
 
         System.out.println("¡¡FELICIDADES!!");

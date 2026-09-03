@@ -6,7 +6,7 @@ public class Pokemon extends Personaje {
         super(nombre, 100, 25, 12);
     }
     
-    public void BlazeRush(Personaje enemigo) {
+    public void blazeRush(Personaje enemigo) {
 
         System.out.println(getNombre() + " usa Blaze Rush.");
 
@@ -24,7 +24,7 @@ public class Pokemon extends Personaje {
     
     @Override
     public void habilidadEspecial(Personaje enemigo) {
-        BlazeRush(enemigo);
+        blazeRush(enemigo);
     }
     
 }

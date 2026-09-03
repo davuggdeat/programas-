@@ -8,7 +8,8 @@ public class Ninja extends Personaje {
         super(nombre, 100, 23, 10);
     }
     
-    public void DisparoDoble(Personaje enemigo) {
+ // DisparoDoble → disparoDoble para seguir camelCase.
+    public void disparoDoble(Personaje enemigo) {
 
         System.out.println(getNombre() + " usa Disparo Doble.");
 
@@ -36,7 +37,7 @@ public class Ninja extends Personaje {
 
     @Override
     public void habilidadEspecial(Personaje enemigo) {
-        DisparoDoble(enemigo);
+        disparoDoble(enemigo);
     }
     
     public boolean estaEscondido() {
